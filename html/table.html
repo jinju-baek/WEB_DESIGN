@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table(표) 관련 태그</title>
+</head>
+<body>
+	<!-- table, tr, td, th -->
+	<table border="1px">
+		<caption>동선씨와 칭구들</caption>
+		<thead> <!-- 표의 제목열을 구분하는 태그 -->
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>별명</th>
+			</tr>
+		</thead>
+		<tbody><!-- 표의 본문을 구분하는 태그 -->
+			<tr>
+				<td>1</td>
+				<td>동선</td>
+				<td>도비</td>
+			</tr>
+			<tr>
+				<td rowspan="2">2</td> <!--세로(열)로 2칸 확보-->
+				<td colspan="2">똥선</td> <!-- 가로(행)로 2칸 확보 -->
+			</tr>
+			<tr>
+				<td>똥똥선</td>
+				<td>오이번</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">칭구가 2명이다</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

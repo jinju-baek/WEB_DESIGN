@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sel_email.html</title>
+	<style type="text/css">
+		body{
+			margin: 0; padding: 0;
+		}
+		input, select{
+			width: 150px;
+			height: 30px;
+			box-sizing: border-box;
+		}
+		#wrap_email{
+			padding: 5px;
+		}
+		#wrap_email>*{
+			float: left;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrap_email">
+		<input type="text" id="email_id" placeholder="ID">
+		<span> @ </span>
+		<input type="text" id="email_url" placeholder="URL" readonly="readonly">
+		<select id="selmail">
+			<option value="" selected="selected">Email 선택</option>
+			<option value="directVal">직접입력</option>
+			<option value="naver.com">naver.com(네이버)</option>
+			<option value="daum.net">daum.net(다음카카오)</option>
+			<option value="gmail.com">gmail.com(구글)</option>
+			<option value="nate.com">nate.com(네이트)</option>
+		</select>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#selmail').change(function(){
+			var url = $(this).val();
+
+			if(url != 'directVal'){
+				$('#email_url').val(url)
+							   .prop('readonly', true);
+			}else{
+				$('#email_url').val('')
+							   .removeAttr('readonly')
+							   .focus();
+			}
+		});
+	});
+</script>
+</html>

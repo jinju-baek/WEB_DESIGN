@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>water_button</title>
+	<style type="text/css">
+		.water_btn{
+			width: 150px;
+			height: 50px;
+			box-sizing: border-box;
+		}
+		.water_btn > a{
+			position: relative;
+			display: block;
+			padding: 10px 30px;
+			border: 2px solid #00aeff;
+			font-size: 18px;
+			letter-spacing: 4px;
+			color: #00aeff;
+			text-decoration: none;
+			overflow: hidden;
+			text-align: center;
+		}
+		.water_btn > a span{
+			position: relative;
+			z-index: 1;
+			transition: 1s;
+		}
+		.water_btn > a:hover span{
+			color: #fff;
+		}
+		.water_btn>a .wave{
+			position: absolute;
+			top: calc(100% + 22px);
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #00aeff;
+			transition: 1s;
+		}
+		.water_btn > a:hover .wave{
+			top: 0;
+		}
+		.water_btn > a .wave:before{
+			content: '';
+			position: absolute;
+			top: -22px;
+			left: 0;
+			width: 100%;
+			height: 22px;
+			background: url(../img/wave.png);
+			animation: animate 0.5s linear infinite;
+		}
+		@keyframes animate{
+			0%{
+				background-position-x: 0;
+				background-position-y: -22px;
+			}
+			100%{
+				background-position-x: 118px;
+				background-position-y: -22px;  
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="water_btn">
+		<a href="#">
+			<span>Button</span>
+			<div class="wave"></div>
+		</a>
+	</div>
+</body>
+</html>

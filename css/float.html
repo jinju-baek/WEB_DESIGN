@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float.html : 포지셔닝</title>
+	<style type:"text/css">
+		.squ{
+			width: 200px;
+			height: 200px;
+			font-size: 25px;
+			color: white;
+			text-align: center;
+			line-height: 200px; /* height, line-height 길이를 맞추면 세로정렬*/
+			float:left;
+			background-color: grey;
+			}
+			#red{ background-color: red; }
+			#dblue{ background-color: blue; }
+			#dgreen{ background-color: green; }
+			#ddd{ clear:both; }
+	</style>
+
+</head>
+<body>
+	<div> <!-- 포지셔닝 하면 겉을 싸고 있는 div태그 위로 올라와서 사이즈가 0이 됨-->
+		<div class="squ" id="red">aaa</div>
+		<div class="squ" id="dblue">bbb</div>
+		<div class="squ" id="dgreen">ccc</div>
+		<div class="squ" id="ddd">ddd</div>
+	</div>
+</body>
+</html>

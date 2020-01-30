@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>active.html</title>
+	<style type="text/css">
+		/* 상태 선택자 
+			선택자 link : 방문하지 않은 링크에 스타일 적용
+			선택자 visited : 방문한 링크에 스타일 적용
+			선택자 hover : 마우스 커서를 올려놓았을 때 스타일 적용
+			선택자 active : 웹요소를 활성화했을 때 스타일 적ㅈ용
+			선택자 focus : 웹 요소에 초점이 맞추어졌을 때 스타일 적용
+		*/
+		ul{ 
+			list-style-type: none;
+			font-size: 25px;
+		 }
+		a:link, a:visited {
+			padding: 10px;
+			text-decoration: none;
+		}
+		a:hover, a:focus{
+			background-color: orangered;
+			color: white;
+		}
+		a:active{
+			background-color: mediumseagreen;
+			color: white;
+		}
+	</style>
+		
+
+</head>
+<body>
+	<div class= "navi">
+		<ul>
+			<li><a href="#">이용안내</a></li>
+			<li><a href="#">객실소개</a></li>
+			<li><a href="#">예약방법 및 요금</a></li>
+			<li><a href="#">예약하기</a></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 	<!-- 한글깨짐방지 -->
+	<title>pokemon.html : 포켓몬스터 카드 도감</title>
+	<link rel="stylesheet" type="text/css" href="../common.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
+		body{
+			font-family: 'Do Hyeon', sans-serif;
+		}
+		.card{
+			border: 1px solid rgba(0, 0, 0, 0.3); /* rgba : 투명도 */
+			width: 250px;
+			height: 300px;
+			background-color: white;
+			/* 
+			현재 가로 길이는 content(width) + padding + border = 250 + 14 + 2 = 266px 
+			box-sizing : border-box; -> 사이즈 고정(가로, 세로) width 250px 고정
+			250px = 234 + 14 + 2
+			 */
+			box-sizing: border-box;
+			margin: 20px;
+			box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+			padding: 7px;
+			display: inline-block;
+		}
+
+		.type{
+			width: 50px;
+			height: 20px;
+			color: white;
+			font-size: 12px;
+			display: inline-block;
+			box-sizing: border-box;
+			text-align: center;
+			border-radius: 10px
+		}
+		.type_info{
+			text-align:right; 
+			font-weight: bold;
+		}
+		.grass{
+			background-color: #78C850;
+		}
+		.poison{
+			background-color: #A040A0;
+		}
+		.name_info{
+
+			font-weight: bold;
+			border-bottom: 1.5px solid rgba(0,0,0,0.2);
+			padding: 5px 0;
+		}
+		.pokemon{ 
+		/* 이미지 가운데 정렬 */
+			margin: 0 auto;
+			display: block;
+		}
+		div.detail_info{
+			margin-bottom: 5px;
+		}
+		table, th, td{
+			border: 1px solid lightgray;
+		}
+		table{
+			width: 225px;
+			margin: 0 auto;
+			background-color: #D4F4FA;
+			box-sizing: border-box;
+			border-collapse: collapse;
+		}
+		th{
+			text-align: left;
+			width: 60px;
+		}
+		td{
+			text-align: right;
+		}
+		div.link_info{
+			border-top: 1px solid rgba(0, 0, 0, 0.2);
+			text-align: right;
+			padding-top: 3px;
+		}
+		/* background = padding + content */
+		span.like_span{
+			background-image: url('../img/ic_favorite.png');
+			background-repeat: no-repeat;
+			line-height: 18px;
+			padding-left: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class="type_info">
+			<!-- class 안에 타입 2개 -->
+			<span class="type grass">풀</span>
+			<span class="type poison">독</span>
+		</div>
+		<div class="name_info">
+			No.001 이상해씨			
+		</div>
+		<div class="img_info">
+			<img src="../img/이상해씨.png" class="pokemon">
+		</div>
+		<div class="detail_info">
+			<table>
+				<tr>
+					<th>분류</th>
+					<td>씨앗 포켓몬</td>
+				</tr>
+				<tr>
+					<th>키</th>
+					<td>0.7m</td>
+				</tr>
+				<tr>
+					<th>몸무게</th>
+					<td>6.9kg</td>
+				</tr>
+			</table>
+		</div>
+		<div class="link_info">
+			<span class="like_span">895</span>
+		</div>
+	</div>
+</body>
+</html>

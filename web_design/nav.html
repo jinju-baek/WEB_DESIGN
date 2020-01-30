@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>navigation : 메뉴 만들기 :) </title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap');
+		body{
+			padding: 0; 
+			margin: 0;
+			font-family: 'Black Han Sans', sans-serif;
+		}
+		ul{
+			list-style-type: none;
+			padding: 0; 			
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		.wrap{
+			width: 100%;
+			height: 50px;
+			background-color: #011638;
+
+		}
+		 /* 
+		 자식선택자 > : .ulnav 바로 다음 하위 li태그들만
+		 자식선택자  (스페이스바) : .ulnav 하위 모든 태그 
+		 */ 
+		.ulnav>li>a{
+			float: left;
+			color: white;	
+			line-height: 50px; 
+			padding : 0 10px;/* 상하:0, 좌우:10px, margin x(콘텐츠밖의 사이즈이므로) */ 
+		}
+		.ulnav>li:hover{ /* ulnav>li에 마우스를 올렸을 때 내 자신을 바꿈 */ 
+			background-color: #4F86C6;
+		}
+		.ulnav>li:hover .dropdown{ /* ulnav에 마우스를 올렸을 때 dropdown을 바꿈 */
+			display: block;
+		}
+
+		.ulnav>li{
+			position: relative;
+			display: inline-block;
+			height: 50px;
+		}
+		.dropdown{
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 100%;
+			display: none;
+		}
+		.dropdown>a{
+			display: block;
+			background-color: #9baec8; 
+			color: white;
+			font-size: 12px;
+			text-align: center;
+			padding: 3px 0;
+		}
+		.dropdown>a:hover{
+			background-color: #4F86C6;
+			text-decoration: underline;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="ulnav">
+			<li><a href="#">BEST</a></li> <!-- a가 들어가있으면 부모사이즈가 아닌 a사이즈를 늘려야함 -->
+			<li><a href="#">NEW</a></li>
+			<li><a href="#">아우터</a>
+				<div class="dropdown">
+					<a href="#">패딩점퍼</a>
+					<a href="#">가디건</a>
+					<a href="#">야상자켓</a>
+					<a href="#">블레이저</a>
+					<a href="#">코트</a>
+				</div>
+			</li>
+			<li><a href="#">상의</a></li>
+			<li><a href="#">하의</a></li>
+		</ul>
+
+
+	</div>
+</body>
+</html>

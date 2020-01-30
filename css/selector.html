@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selector(선택자)</title>
+	<style type="text/css">
+		/* [*] 전체선택자 : 모든 태그를 선택(글자체, 글자크기)*/ 	
+		*{
+			font-size: 45px;
+		}
+		/* [태그] 태그선택자 : 해당 태그 전부를 선택 */
+		div{
+			border: 5px solid orangered;
+			margin-bottom: 20px; /* 하단부 바깥 여백*/
+		}
+		/* [#] id선택자 : 해당 id 1개 선택 */
+		#div1{
+			font-weight: bold; /* 글자 진하게 */
+			color: dodgerblue /* 글자색 */
+		}
+		/* [.] class선택자 : 해당 class 복수개 선택 */
+		.point{
+			color: red;
+			font-size: 80px;
+			font-weight: bold;
+		}
+		/* [?, ?] 그룹 선택자 : , 로 엮은 그룹 모두 선택 */
+		div, span{
+			color: green;
+		}
+
+		/* 우선순위(규모가 가장 작은 것 부터) : id -> class -> 태그 -> 전체 */
+		div{ color: yello; }
+		#div1{ color: red }
+		.div2{ color: blue }
+
+
+		/* CSS사용할 수 있는 방법 */
+		/* 우선순위(가까운순) : 인라인 -> 내부 -> 외부 */
+		/* 1. 인라인스타일 (잘 안씀)
+		 	태그 자체 : <div style = "color:green"> 
+		   2. 내부스타일
+			상단 스타일시트 : <style type="text/css"><style>
+		   3. 외부스타일
+			외부 : member.css ---> html파일 import	
+			*/
+	</style>
+</head>
+<body>
+	<div>
+		To.동선
+		<p>
+			동선씨 허쉬우유 정말 맛있네요. <span class='point'>또</span> 먹고싶네요. <br>
+			<span class="point">하하 그렇다구요.</span>
+		</p>
+	</div>
+
+	<div id="div1" class="div2" style="color: green">
+		동선씨 장난이에요.
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input(입력) 관련 태그</title>
+</head>
+<body>
+	<form name="" action="" method=""></form>
+		<input type="text" name="" placeholder="text" value="약오르지" readonly="readonly"> <br> <!-- 텍스트, readonly : 읽기 전용 -->
+		<input type="password" name="" placeholder="password"> <br> <!-- 패스워드 -->
+		<input type="hidden" name="" placeholder="hidden"> <br> <!-- 숨김 -->
+		<input type="search" name="" placeholder="search"> <br> <!-- 텍스트기능, 오른쪽 x버튼이 생김 -->
+		<input type="url" name="" placeholder="url"> <br> <!-- 텍스트기능, 유효성체크 때문에 생김, required랑 같이 씀 -->
+		<input type="email" name="" placeholder="email"> <br> <!-- 텍스트기능, 유효성체크 때문에 생김, required랑 같이 씀 -->
+		<input type="tel" name="" placeholder="tel"> <br> <!-- 텍스트기능, 유효성체크 때문에 생김, required랑 같이 씀 -->
+		<input type="number" name="" placeholder="number"> <br> <!-- 숫자값 1씩 증가 -->
+		<input type="range" name="" placeholder="range"> <br> <!--  -->
+
+		<hr>
+		<input type="file" name=""> <br> <!-- 첨부파일 기능 -->
+		<label><input type="radio" name="subject">JAVA</label> <!-- radio : 한개만 선택 가능(여러개 선택할 경우 그룹으로 묶어야 함) --> 
+		<label><input type="radio" name="subject">Python</label> 
+		<label><input type="radio" name="subject">Oracle</label> <br> 
+
+		<label><input type="checkbox" name="subject">복숭아</label> <!-- checkbox : 여러개 선택 가능 -->
+		<label><input type="checkbox" name="subject">포도</label> 
+		<label><input type="checkbox" name="subject">수박</label> 
+		<hr>
+
+		<input type="button" name="" value="제출"> <!-- 함수 입력시 동작 실행 -->
+		<input type="submit" name=""> <!-- form태그의 action목적지로 데이터 전달(유효성 체크 불가) -->
+		<input type="reset" name=""> <br> <!-- 폼안의 모든 데이터를 초기화 -->
+
+
+
+</body>
+</html>

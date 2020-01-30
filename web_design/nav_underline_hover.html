@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nav_underline_hover.html</title>
+	<link rel="stylesheet" type="text/css" href="../common.css">
+	<style type="text/css">
+		body{
+			background-color: #0B0B0B;
+		}
+		div.container{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		li{
+			display: inline-block;
+		}
+		li a{
+			text-decoration: none;
+			display: inline-block;
+			color: #fff;
+			font-family: Source Sans pro;
+			font-weight: lighter;
+			font-size: 28px;
+			padding: 0 20px;
+		}
+
+		/* 가상요소(before, after) : 태그는 없지만 존재, 특정요소에 효과를 줄 때 사용
+			해당 태그 앞, 뒤에 자신이랑 똑같은 자식태그(자신을 기준으로)를 만듦
+			Container::before
+			Container:after
+		*/
+		.cool_link:after{
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background-color: #fff;
+			transition: width 0.3s;
+		}
+		.cool_link:hover:after{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<li><a href="#" class="cool_link">HOME</a></li>
+		<li><a href="#" class="cool_link">Search</a></li>
+		<li><a href="#" class="cool_link">About</a></li>
+		<li><a href="#" class="cool_link">Contact</a></li>
+	</div>
+</body>
+</html>

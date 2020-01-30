@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>brother.html : 형제 선택자</title>
+	<style type="">
+		
+		/*
+			연결선택자
+			1. 자식선택자 >
+			 : 부모 바로 다음에 오는 하위 태그
+			2. 자손석택자 ( )
+			 : 부모 안에 있는 모든 녀석들을 선택
+			 .grand li = 클래스가 grand인 태그 안에 포함된 모든<li>태그를 선택
+			3. 인접형제선택자 (+)
+			 : 나 바로 다음에 형제를 선택(1명의 형제만 선택)
+			4. 형제들선택자 (~)
+			 : 나 바로 다음에 오는 형제들 선택(다수)
+		*/
+		.grand>.parent{
+			margin: 0; padding: 0;
+			background-color: dodgerblue;
+			color: white;
+		}
+		.grand li{
+			font-size: 25px;
+			font-weight: bold;
+		}
+		.dd+li{
+			color: orange;
+			font-size: 50px;
+		}
+		.dd~li{
+			background-color: mediumseagreen;
+		}
+	</style>
+</head>
+<body>
+	<div class="grand">
+		<ul class="parent">
+			<li>공선</li>			
+			<li>농선</li>
+			<li>동선</li>
+			<li class="dd">롱선</li>
+			<li>몽선</li>
+			<li>봉선</li>
+			<li>송선</li>
+			<li>옹선</li>
+		</ul>
+	</div>
+	<ul>
+		<li>종선</li>
+		<li>총선</li>
+		<li>홍선</li>
+		<li>콩선</li>
+	</ul>
+</body>
+</html>

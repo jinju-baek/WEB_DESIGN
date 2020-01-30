@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form(폼:입력) 관련 태그</title>
+</head>
+<body>
+	<!-- method : 동작(수단), action : 동작(목적지) -->
+	<form method="" action="" name="frm_login">
+		<!-- 입력받는 태그들 -->
+		<label for="inputid">ID</label>
+		<input type="text" name="" id="inputid" value="아이디"><br>
+		<span>PW</span>
+		<input type="password" name="" id="inputpw" value="비밀번호"><br>
+		<input type="button" name="" value="로그인">
+	</form>
+
+	<!-- 선택자(Selector) -->
+	<!-- id(HTML) : 유일한 식별자, 중복 x -->
+	<!-- class(HTML) : 복수개를 선택, 중복 o -->
+	<!-- name(JAVA) -->
+
+	<hr>
+
+	<!-- fieldset, legend : 폼 요소 그룹으로 묶기 -->
+	<form name="" action="" method="">
+		<!-- fieldset : 테두리, legent : 제목 -->
+		<fieldset>
+			<legend>회원가입</legend>
+			<label for="memid">아이디</label>
+			<input type="text" name="" id="memid" placeholder="ID를 입력하세요"> <br>
+			<label for="mempw">패스워드</label>
+			<input type="password" name="" id="mempw" placeholder="대소문자와 특수문자를 합쳐서 8자이상"> <br>
+			<label for="memphone">전화번호(-없이)</label>
+			<input type="text" name="" id="memphone" value="010" maxlength="11"> <br>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PAIKSRECIPE : 회원가입</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<!-- favicon : 제목줄의 아이콘 -->
+	<script src="https://kit.fontawesome.com/4d344f8121.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="image/png" href="../img/naver/naversm.png">
+
+	<style type="text/css">
+		*{
+			font-family: 'Noto Sans KR', sans-serif;
+			box-sizing: border-box;
+		}
+		body, h1, h2, h3, h4, h5, h6, ul, p{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #f5f6f7; 
+			font-size: 12px;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			/* inherit : 상속받은 색을 사용 */
+			color: inherit;
+		}
+
+		.wrap{
+			width: 768px;
+			margin: 0 auto;
+		}
+		.header{
+			padding: 62px 0px 20px;
+			position: relative;
+		}
+		.n_logo{
+			display: block;
+			/* 
+				display: block으로 설정한 후 가로를 다 차지하여 
+				남는 가로를 margin: auto로 가운데 정렬 함 
+			*/
+			margin: auto;
+			width: 280px;
+			height: 64px;
+			background: url(../../img/logo.png) 50% 50% no-repeat;
+			background-size: contain;
+
+		}
+		.join_content{
+			width: 460px;
+			margin: 0 auto;
+		}
+		.row_group{
+			overflow: hidden;
+			width: 100%;
+		}
+		.join_title{
+			margin: 19px 0 8px;
+			font-size: 14px;
+			font-weight: 700;
+			color: black;
+		}
+		.ps_box{
+			display: flex;
+			align-items: center;
+			position: relative;
+			width: 100%;
+			height: 51px;
+			border: 1px solid #dadada;
+			padding: 10px 14px 10px 14px;
+			background: #fff;
+			vertical-align: top;
+		}
+		.int_id{
+			padding-right: 110px;
+		}
+		.int_pass{
+			padding-right: 40px;
+		}
+		.int{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 29px;
+			padding-right: 25px;
+			line-height: 29px;
+			border: none;
+			background: #fff;
+			font-size: 15px;
+			z-index: 10; 
+		}.step_url{
+			position: absolute;
+			right: 13px;
+			font-size: 15px;
+			color: #8e8e8e;
+		}
+		.error_next_box{
+			display: block;
+			margin: 9px 0 -2px;
+			font-size: 12px;
+			line-height: 14px;
+			color: red;
+			height: 15px;
+			display: none;
+		}
+		.pw_lock{
+			background-image: url('../../img/m_icon_pw_step.png');
+			background-repeat: no-repeat;
+			background-size: 125px 75px;
+			cursor: pointer;
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+		}
+		.repw_lock{
+			background-image: url('../../img/m_icon_pw_step.png');
+			background-repeat: no-repeat;
+			background-size: 125px 75px;
+			cursor: pointer;
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			background-position: -27px 0;
+		}
+		.bir_wrap{
+			/* 
+				<table> -> display:table
+				<td> -> display:table-cell;
+				<div> -> display:block;
+			; */
+			display: table;
+			width: 100%;
+		}
+		.choice{
+			font-size: 12px;
+			font-weight: 400;
+			color: #8e8e8e;
+		}
+		.btn_double_area{
+			margin: 30px 0 9px;
+		}
+		.btn_type{
+			display: block;
+			width: 100%;
+			padding: 21px 0 17px;
+			font-size: 20px;
+			font-weight: 700;
+			text-align: center;
+			cursor: pointer;
+		}
+		.btn_agree{
+			color: white;
+			background-color: #B22230;
+		}
+		.find_address{
+			width: 130px;
+			height: 30px;
+		}
+
+
+
+
+		#footer{
+			padding: 15px 0;
+		}
+		#footer > ul{
+			margin: 0 auto 9px;
+			text-align: center;
+		}
+		#footer *{
+			font-size: 11px;
+			line-height: normal;
+			list-style: none;
+			color: #333;
+		}
+		#footer>ul>li{
+			display: inline;
+			padding: 0 5px 0 7px;
+			border-left: 1px solid #dadada;
+		}
+		#footer>ul>li a:hover{
+			color: #B22230;
+			text-decoration: underline;
+		}
+		/* footer의 모든 ul태그 중 모든 li에서 첫번째 자식만 */
+		#footer ul li:first-child{
+			/* !important : 우선순위 가장 최상위(왠만하면 안씀) */
+			border-left: 0px!important;
+		}
+		#addr_logo{
+			width: 63px;
+			height: 11px;
+		}
+		#address{
+			margin: 0 auto;
+			text-align: center;
+		}
+		#address *{
+			font: 9px verdana;
+		}
+		#address a{
+			font-weight: bold;
+		}
+		#address a:hover{
+			color: #B22230;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header><div class="header">
+			<h1 class="naver_logo"><a href="#" class="n_logo"></a></h1>
+		</div></header>
+
+		<section>
+			<form name="frm_join" action="" method="POST">
+				 <div class="container">
+				 	<div class="join_content">
+				 		<div class="row_group">
+					 		<div class="join_row">
+						 		<h3 class="join_title">
+						 			<label for="id">아이디</label>
+						 		</h3>
+						 		<span class="ps_box int_id">
+						 			<input type="text" id="id" name="id" class="int">
+						 			<span class="step_url">@naver.com</span>
+						 		</span>
+						 		<span class="error_next_box">필수 정보입니다.</span>
+						 	</div>
+
+						 	<div class="join_row">
+						 		<h3 class="join_title">
+						 			<label for="pwsd1">비밀번호</label>
+						 		</h3>
+						 		<span class="ps_box int_pass">
+						 			<input type="password" id="pwsd1" name="pwsd1" class="int">
+						 			<span class="step_url"><span class="pw_lock"></span></span>
+						 		</span>
+						 		<span class="error_next_box">필수 정보입니다.</span>
+						 	</div>
+
+							<div class="join_row">
+						 		<h3 class="join_title">
+						 			<label for="pwsd2">비밀번호 재확인</label>
+						 		</h3>
+						 		<span class="ps_box int_pass">
+						 			<input type="password" id="pwsd2" name="pwsd2" class="int">
+						 			<span class="step_url"><span class="repw_lock"></span></span>
+						 		</span>
+						 		<span class="error_next_box">필수 정보입니다.</span>
+						 	</div>
+						</div>
+
+					 	<div class="row_group">
+					 		<div class="join_row">
+						 		<h3 class="join_title">
+						 			<label for="name">이름</label>
+						 		</h3>
+						 		<span class="ps_box">
+						 			<input type="text" id="name" name="name" class="int">
+						 		</span>
+						 		<span class="error_next_box">필수 정보입니다.</span>
+					 		</div>
+
+					 		<div class="join_row">
+						 		<h3 class="join_title">
+						 			<label for="email">본인 확인 이메일<span class="choice">(선택)</span></label>
+						 		</h3>
+						 		<span class="ps_box">
+						 			<input type="text" id="email" name="email" class="int" placeholder="선택입력">
+						 		</span>
+						 		<span class="error_next_box">필수 정보입니다.</span>
+					 		</div>
+
+							<div class="join_row">
+						 		<h3 class="join_title">
+						 			<label for="phone">휴대전화</label>
+						 		</h3>
+						 		<span class="ps_box">
+						 			<input type="tel" id="phone" name="phone" class="int" placeholder="-없이 입력 예)01012345678">
+						 		</span>
+						 		<span class="error_next_box">필수 정보입니다.</span>
+					 		</div>
+							
+							<div class="join_row">
+								<h3 class="join_title">
+									<label for="">주소</label> 
+								</h3>
+								<span class="ps_box">
+									<input type="text" class="int" placeholder="우편번호">
+									<input type="button" class="find_address" value="우편번호 찾기">
+								</span>
+								<span class="ps_box">
+									<input type="text" class="int" placeholder="주소">
+								</span>
+								<span class="ps_box">
+									<input type="text" class="int" placeholder="상세주소">
+								</span>
+							</div>
+
+
+						</div>
+
+						
+
+						<div class="btn_double_area">
+							<span><a href="#" class="btn_type btn_agree">가입하기</a></span>
+						</div>
+
+
+				 	</div>
+				 </div>
+			</form>
+		</section>
+
+		<footer>
+			<div id="footer">
+				<ul>
+					<li><a href="#">이용약관</a></li>
+					<li><strong><a href="#">개인정보처리방침</a></strong></li>
+					<li><a href="#">책임의 한계와 법적고지</a></li>
+					<li><a href="#">회원정보 고객센터</a></li>
+				</ul>
+
+				<div id="address">
+					<span>
+						<a href="https://www.naver.com">
+							<img id="addr_logo" src="../img/naver/naver_logo.png">
+						</a>
+					</span>
+					<span>Copyright</span>
+					<span>ⓒ</span>
+					<span><strong><a href="#">PAIK'S RECIPE Corp.</a></strong></span>
+					<span>All Rights Reserved.</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
