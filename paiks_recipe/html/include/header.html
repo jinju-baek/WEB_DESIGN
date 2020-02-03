@@ -320,14 +320,18 @@
 			padding-right: 5px;
 		}
 		.login_btn{
+			display: block;
 			background-color: #B22230;
 			font-weight: bold;
 			color: white;
+			width: 100%;
 			height: 54px;
 			border-radius: 10px;
-			margin-top: 34px;
 			text-align: center;
 			line-height: 54px;
+			outline: none;
+			border: none;
+			margin: 34px auto 0;
 		}
 		.login_btn:hover{
 			cursor: pointer;
@@ -370,16 +374,15 @@
 			</div>
 			<div class="login_wrap">
 				<div class="form_wrap">
-					<form class="frm_login">
+					<form class="frm_login" name="from_login" action="loginCheck" method="POST">
 						<div class="label">
 							<div>이메일<br></div>
-							<input class="login_input" id="login_id" type="text" placeholder="이메일 주소를 입력해주세요">
+							<input type="email" class="login_input" id="login_id" placeholder="이메일 주소를 입력해주세요" required>
 						</div>
 						<div class="label">
 							<div>비밀번호<br></div>
 							<div class="input_pw">
-								<input class="login_input" id="login_pw" type="password" 	
-								placeholder="비밀번호">
+								<input type="password" class="login_input" id="login_pw" placeholder="비밀번호" required minlength="6" maxlength="18">
 								<span class="pw_eye"><i class="fas fa-eye-slash"></i></span>
 							</div>
 						</div>
@@ -387,7 +390,16 @@
 							<input type="checkbox" id="loginck" class="login_check_btn">
 							<label for="loginck" class="label1">&nbsp;로그인 상태 유지</label>
 						</div>
-						<div class="login_btn"><span>로그인</span></div><br>
+						<!-- 
+							버튼(submit 기능)을 클릭하면 id, pw값을 loginCheck로 전달 
+							<a href="#">로그인</a> -> 효율성 떨어짐
+							$(document).on('click', '#btn', function(){
+								$('#frm_login').submit();
+							});
+							<button type="submit">로그인</button>
+							<input type="submit" value="로그인">
+						-->
+						<div><input type="submit" class="login_btn" value="로그인"></input></div><br>
 					</form>
 					<div class="mem_wrap">
 							<a href="#">아이디 찾기</a>&nbsp;<span>ㅣ</span>&nbsp;
