@@ -128,25 +128,40 @@ var joinValidate = {
 	checkId : function(id) {		
 		// 정규식
 		var regEmpty = /\s/g; // 공백문자
-		var regEtc = /[~`!#$%^&*()+=\|\\\{\}\[\]:";'<>,?//]/g; // 특수문자
-		var regid = /[^a-z0-9-_.@]+/g; // 올바른 아이디 형식}
+		var regEmail = /^[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[@]{1}[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[.]{1}[A-Za-z]{1,5}$/g;
 
 		// 1. 값이 있는지 없는지 체크(spacebar이 들어올 경우를 대비해 length(spacebar는 length=0)도 비교)
-		if(id == '' || id.length == 0){
+		if(id =='' || id.length == 0){ // 1. 값 유무
 			return this.resultCode.empty_val;
-		} else if(id.match(regEmpty)){ // 2. 값 사이에 공백이 있는지 체크
+		} else if(id.match(regEmpty)){ // 2. 공백 유무
 			return this.resultCode.space_length_val;
-		} else if(id.match(regEtc)){ // 3. 특수문자 체크(-, _, @, .만 가능)
-			return this.resultCode.specialStr_id;
-		} else if(id.match(regid)){ // 4. 아이디 정규식 체크
-			return this.resultCode.invalid_id;
-		} else if(id.charAt(0) == '-' || id.charAt(0) == '_' || id.charAt(0) == '@' || id.charAt(0) == '.'){ // 5. 첫글자로 특수문자 사용불가
-			return this.resultCode.first_special_id;
-		} else if(id.length < 5 || id.length >20){ // 6. 길이(5~20자 이내)
-			return this.resultCode.length_id;
-		} else{
-			return this.resultCode.success_id;
+		} else if(!id.match(regEmail)){ // 3. 유효성 체크
+			return this.resultCode.invalid_email;
+		} else{ // 통과
+			return this.resultCode.success_email;
 		}
+
+		
+		// var regEmpty = /\s/g; // 공백문자
+		// var regEtc = /[~`!#$%^&*()+=\|\\\{\}\[\]:";'<>,?//]/g; // 특수문자
+		// var regid = /[^a-z0-9-_.@]+/g; // 올바른 아이디 형식}
+
+		// // 1. 값이 있는지 없는지 체크(spacebar이 들어올 경우를 대비해 length(spacebar는 length=0)도 비교)
+		// if(id == '' || id.length == 0){
+		// 	return this.resultCode.empty_val;
+		// } else if(id.match(regEmpty)){ // 2. 값 사이에 공백이 있는지 체크
+		// 	return this.resultCode.space_length_val;
+		// } else if(id.match(regEtc)){ // 3. 특수문자 체크(-, _, @, .만 가능)
+		// 	return this.resultCode.specialStr_id;
+		// } else if(id.match(regid)){ // 4. 아이디 정규식 체크
+		// 	return this.resultCode.invalid_id;
+		// } else if(id.charAt(0) == '-' || id.charAt(0) == '_' || id.charAt(0) == '@' || id.charAt(0) == '.'){ // 5. 첫글자로 특수문자 사용불가
+		// 	return this.resultCode.first_special_id;
+		// } else if(id.length < 5 || id.length >20){ // 6. 길이(5~20자 이내)
+		// 	return this.resultCode.length_id;
+		// } else{
+		// 	return this.resultCode.success_id;
+		// }
 	},
 
 	// 패스워드 유효성 체크

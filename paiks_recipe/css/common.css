@@ -65,14 +65,7 @@ button.btn-primary:hover{
 	background-color: #871a24;
 	border-color: transparent;
 }
-button.btn-support{
-	background-color: #8DA05E;
-	color: white;
-}
-button.btn-support:hover{
-	background-color: #71804b;
-	border-color: transparent;
-}
+
 
 /* Text에 밑줄 쳐지는 css 효과 */
 .magicline:after{
