@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background-color: #f1f1f2;
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+		div.content_wrap{
+			width: 100%
+		}
+		div.content{
+			width: 1400px;
+			margin: 0 auto;
+			box-sizing: border-box;
+			height: 300px; /* 임시로 고정, 나중에 삭제할것 */
+			border: 1px solid red;
+		}
+		.banner{
+			display: block;
+			background-image: url("../img/—Pngtree—gourmet cuisine minimalist background_1004210.jpg");
+			background-size: contain;
+			height: 100%;
+			background-position: center;
+		}
+		.new_video, .best_video{
+			border: 1px solid #e9e9e9;
+			margin: 20px 0;
+			background-color: white;
+		}
+		.new_video_header{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 20px 30px;
+		}
+		.new_video_header_name{
+			font-size: 25px;
+		}
+		.new_video_header_name+a{
+			border: 2px solid #B22230;
+			padding: 10px 15px;
+			font-size: 12px;
+			color: #B22230;
+			font-weight: bold;
+		}
+		.new_video_header_name+a:hover{
+			border: 2px solid #6c141c;
+			color: #6c141c;
+		}
+		.img{
+			width: 250px;
+			height: auto;
+		}
+		.img+div{
+			text-align: center;
+			font-size: 18px;
+		}
+		ul{
+			display: flex;
+			justify-content: center;
+		}
+		ul li{
+			margin: 0 10px 10px;
+		}
+		ul li div{
+			width: 250px;
+		}
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+	<div class="content_wrap">
+		<div class="content">
+			<div class="banner"></div>
+			<div class="new_video">
+				<div class="new_video_header">
+					<div class="new_video_header_name"><b>최신 동영상레시피</b></div>
+					<a href="#">더보기</a>
+				</div>
+				<ul>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=HSPOnMZNoY4&t=33s">
+						<img class="img" src="../img/만두피튀김.webp">
+						<div>떡볶이와 같이 먹으면 환상!</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=t4Es8mwdYlE&t=358s" >
+							<img class="img" src="../img/떡볶이.webp">
+							<div>분식집st 떡 볶 이☆</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=udirCMIxs_c">
+							<img class="img" src="../img/고추장찌개.webp">
+							<div>얼큰한 고추장 찌개! 밥 한 공기 뚝딱!</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=F3C8-uEMixU">
+							<img class="img" src="../img/돼지마늘버거.webp">
+							<div>햄버거 패티가 바삭 바삭!</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=WneiVYnZgHo">
+							<img class="img" src="../img/마늘탕수육.webp">
+							<div>부먹, 찍먹 다 맛있는 탕수육! 바삭 바삭~</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="best_video">
+				<div class="new_video_header">
+					<div class="new_video_header_name"><b>BEST 음식</b></div>
+					<a href="#">더보기</a>
+				</div>
+				<ul>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=HSPOnMZNoY4&t=33s">
+						<img class="img" src="../img/김치찌개.webp">
+						<div>초간단ver 김치찌개</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=t4Es8mwdYlE&t=358s" >
+							<img class="img" src="../img/제육볶음100인분.webp">
+							<div>제육볶음 100인분</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=udirCMIxs_c">
+							<img class="img" src="../img/김치밥.webp">
+							<div>강식당2 화제의 메뉴!</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=F3C8-uEMixU">
+							<img class="img" src="../img/만능양파볶음1.webp">
+							<div>양파 농가를 응원합니다! 만능양파볶음 대작전1</div>
+						</a>
+					</li>
+					<li>
+						<a class="video_list" href="https://www.youtube.com/watch?v=WneiVYnZgHo">
+							<img class="img" src="../img/만능양파볶음2.webp">
+							<div>양파 농가를 응원합니다! 만능양파볶음 대작전2</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="recommend">
+				<ul>
+					<li>곡류</li>
+					<li>면/만두류</li>
+					<li>빵류</li>
+					<li>과자류</li>
+					<li>떡류</li>
+					<li>감자/고구마류</li>
+					<li>묵/두부</li>
+					<li>콩/견과류</li>
+					<li>채소류</li>
+					<li>과일류</li>
+					<li>고기류</li>
+					<li>햄/소시지</li>
+					<li>계란류</li>
+					<li>어패류</li>
+					<li>해조류</li>
+					<li>유제품/치즈류</li>
+					<li>양념류</li>
+					<li>초콜렛/사탕</li>
+					<li>음료/주류</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
