@@ -334,7 +334,7 @@
 							<div class="meterial_submit">
 								<div class="meterial_selected">
 									<div class="meterial_selected_header">내가 선택한 재료</div>
-									<div class="meterial_selected_content">내용</div>
+									<div class="meterial_selected_content"></div>
 								</div>
 								<div><input class="meterial_btn" type="button" name="" value="이 재료로 추천받기"></div>
 							</div>
@@ -355,7 +355,7 @@
 
 	// 카테고리 선택시 하위 목록 나타남
 	$('.meterial_category ul li').click(function(){
-		for(var i = 0; i < 9; i++){
+		for(var i = 0; i < 6; i++){
 			$('.subclass ul:eq('+ i +')').css('display', 'none');
 		}
 		var index = $(this).attr('data-role');
@@ -368,8 +368,7 @@
 		// 체크박스 선택시
 		if($(this).is(':checked') == true){
 			// 선택한 값의 다음 값인 label값을 변수 selval에 담음
-			var selval=$(this).next().text();
-
+			var selval = $(this).next().text();
 			// arr에 selval이 있는지 확인후 없으면 
 			if($.inArray(selval, arr) == -1){
 				// arr에 selval을 넣고
@@ -379,12 +378,13 @@
 			}
 		// 체크박스 선택해체시
 		} else{
-			var str = $('.meterial_selected_content').text;
-			alert(str);
-			if(str.includes(selval)){
-				alert('있다!');
-			}else{
-				alert('없다!');
+			// 내가 선택한 재료 항목의 텍스트값 초기화 후
+			$('.meterial_selected_content').empty();
+			// 배열에서 체크박스 해제한 값을 삭제
+			var test = arr.splice(arr.indexOf($(this).next().text()), 1);
+			// 배열에 있는 값(체크하여 추가한 값)을 다시 추가한다.
+			for(var i = 0; i < arr.length; i++){
+				$('.meterial_selected_content').append(arr[i]+' ');	
 			}
 		}
 	});
