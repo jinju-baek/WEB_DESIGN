@@ -1,182 +1,188 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-	<style type="text/css">
-		body{
-			background-color: #f1f1f2;
-			font-family: 'Noto Sans KR', sans-serif;
-		}
-		div.content_wrap{
-			width: 100%
-		}
-		div.content{
-			width: 1400px;
-			margin: 0 auto;
-			box-sizing: border-box;
-		}
-		.banner{
-			display: block;
-			background-image: url("../img/banner.png");
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center center;
-			background-color: black;
-			height: 400px;
-		}
-		.new_video, .best_video{
-			border: 1px solid #e9e9e9;
-			margin: 20px 0;
-			background-color: white;
-		}
-		.new_video_header{
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin: 20px 30px;
-		}
-		.new_video_header_name{
-			font-size: 25px;
-		}
-		.new_video_header_name+a{
-			border: 2px solid #B22230;
-			padding: 10px 15px;
-			font-size: 12px;
-			color: #B22230;
-			font-weight: bold;
-		}
-		.new_video_header_name+a:hover{
-			border: 2px solid #6c141c;
-			color: #6c141c;
-		}
-		.img{
-			width: 250px;
-			height: auto;
-		}
-		.img+div{
-			text-align: center;
-			font-size: 18px;
-		}
-		.new_video_header+ul{
-			display: flex;
-			justify-content: center;
-		}
-		.new_video_header+ul li{
-			margin: 0 10px 30px;
-			border: 1px solid #e9e9e9;
-
-		}
-		.new_video_header+ul li div{
-			width: 250px;
-		}
-
-
-
-
-
-		.meterial{
-			padding: 30px;
-			background-color: #e66768;
-			color: #e66768;
-			text-align: center;
-		}
-		.meterial_wrap{
-			padding: 10px;
-		}
-		.meterial_header{
-			color: yellow;
-			font-size: 30px;
-			font-weight: bold;
-		}
-		.meterial_body{
-			display: flex;
-			justify-content: center;
-			padding: 10px 0;
-		}
-		.meterial_category{
-			background-color: white;
-			overflow: auto;
-			display: flex;
-			border: 1px solid #B22230;
-			height: 190px;
-		}
-		.meterial_category ul li{
-			text-align: left;
-			padding: 10px;
-			border-bottom: 1px solid #e9e9e9;
-		}
-		.meterial_category ul li:hover{
-			font-weight: bold;
-		}
-		.meterial_list{
-			background-color: white;
-			overflow: auto;
-			position: relative;
-			right: -1px;
-			display: flex;
-			border: 1px solid #B22230;
-			margin: 0 15px;
-			width: 500px; 
-			height: 190px;
-		}
-		.subclass{
-			position: absolute;
-			width: auto;
-		}
-		.subclass ul{
-			display: none;
-		}
-		.subclass ul li{
-			display: inline;
-			padding: 3px;
-			float: left;
-			font-size: 15px;
-		}
-		.meterial_selected{
-			position: relative;
-			background-color: white;
-			border: 1px solid #B22230;
-			height: 190px;
-			width: 200px; 
-		}
-		.meterial_selected_header{
-			background-color:white;
-			color: #e66768;
-			padding: 10px;
-			font-size: 18px;
-			font-weight: bold;
-			border-bottom: 1px solid #e9e9e9;
-		}
-		.meterial_selected_header + div{
-			padding: 10px;
-		}
-		.meterial_btn{
-			position: absolute;
-			right: 8px;
-			bottom: 5px;
-			border: none;
-			background-color: white;
-			color: #e66768;
-			outline: none;
-			padding: 5px 10px;
-			font-weight: bold;
-			width: 180px;
-			height: 40px;
-			border: 1px solid #e66768;
-			border-radius: 5px 5px;
-		}
-		.meterial_selected_content{
-			overflow: auto;
-		}
-
-
-
-
-	</style>
-
-</head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="${path}/resources/css/common.css">
+		<style type="text/css">
+			body {
+				background-color: #f1f1f2;
+				font-family: 'Noto Sans KR', sans-serif;
+			}
+			
+			div.content_wrap {
+				margin-top: 80px;
+				width: 100%
+			}
+			
+			div.content {
+				width: 1400px;
+				margin: 0 auto;
+				box-sizing: border-box;
+			}
+			
+			.banner {
+				display: block;
+				background-image: url("${path}/resources/img/banner1.png");
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				height: 350px;
+			}
+			
+			.new_video, .best_video {
+				border: 1px solid #e9e9e9;
+				margin: 20px 0;
+				background-color: white;
+			}
+			
+			.new_video_header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 20px 30px;
+			}
+			
+			.new_video_header_name {
+				font-size: 25px;
+			}
+			
+			.new_video_header_name+a {
+				border: 2px solid #B22230;
+				padding: 10px 15px;
+				font-size: 12px;
+				color: #B22230;
+				font-weight: bold;
+			}
+			
+			.new_video_header_name+a:hover {
+				color: white;
+				background-color: #B22230;
+			}
+			
+			.img {
+				width: 250px;
+				height: auto;
+			}
+			
+			.img+div {
+				text-align: center;
+				font-size: 18px;
+			}
+			
+			.new_video_header+ul {
+				display: flex;
+				justify-content: center;
+			}
+			
+			.new_video_header+ul li {
+				margin: 0 10px 30px;
+				border: 1px solid #e9e9e9;
+			}
+			
+			.new_video_header+ul li div {
+				width: 250px;
+			}
+			
+			.meterial {
+				padding: 30px;
+				background-color: #e66768;
+				color: #e66768;
+				text-align: center;
+			}
+			.meterial_wrap {
+				padding: 10px;
+			}
+			.meterial_header {
+				color: yellow;
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.meterial_body {
+				display: flex;
+				justify-content: center;
+				padding: 10px 0;
+			}
+			.meterial_category {
+				background-color: white;
+				overflow: auto;
+				display: flex;
+				border: 1px solid #B22230;
+				height: 190px;
+			}
+			.meterial_category ul li {
+				text-align: left;
+				padding: 10px;
+				border-bottom: 1px solid #e9e9e9;
+				cursor: pointer;
+			}
+			.meterial_category ul li:hover {
+				font-weight: bold;
+			}
+			.meterial_list {
+				background-color: white;
+				overflow: auto;
+				position: relative;
+				right: -1px;
+				display: flex;
+				border: 1px solid #B22230;
+				margin: 0 15px;
+				width: 500px; 
+				height: 190px;
+			}
+			.subclass {
+				position: absolute;
+				width: auto;
+			}
+			.subclass ul {
+				display: none;
+			}
+			.subclass ul li {
+				display: inline;
+				padding: 3px;
+				float: left;
+				font-size: 15px;
+			}
+			.meterial_selected {
+				position: relative;
+				background-color: white;
+				border: 1px solid #B22230;
+				height: 190px;
+				width: 200px; 
+			}
+			.meterial_selected_header {
+				background-color:white;
+				color: #e66768;
+				padding: 10px;
+				font-size: 18px;
+				font-weight: bold;
+				border-bottom: 1px solid #e9e9e9;
+			}
+			.meterial_selected_header + div {
+				padding: 0 10px;
+			}
+			.meterial_btn {
+				position: absolute;
+				right: 8px;
+				bottom: 5px;
+				border: none;
+				background-color: white;
+				color: #e66768;
+				outline: none;
+				padding: 5px 10px;
+				font-weight: bold;
+				width: 180px;
+				height: 40px;
+				border: 1px solid #e66768;
+				border-radius: 5px 5px;
+				cursor: pointer;
+			}
+			.meterial_selected_content {
+				height: 90px;
+				overflow: auto;
+			}
+		</style>
+	</head>
 <body>
 	<div class="content_wrap">
 		<div class="content">
