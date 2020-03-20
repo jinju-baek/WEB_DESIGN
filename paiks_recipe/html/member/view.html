@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+	<style type="text/css">
+		.board_view_wrap{
+			width: 768px;
+			margin: 0 auto;
+		}
+		h2{
+			font-size: 40px;
+		}
+		.view_content_wrap{
+			border-bottom: 1px solid black;
+		}
+		.view_title{
+			font-size: 25px;
+			padding: 10px;
+		}
+		.view_info_wrap{
+			display: flex;
+			justify-content: space-between;
+			background-color: #F1F1F1;
+			border-top: 1px solid black;
+			padding: 10px;
+		}
+		.view_info{
+			display: flex;
+		}
+		.view_info>div{
+			padding: 0 5px;
+		}
+		.thumbs_up{
+			display: block;
+			padding: 5px 10px;
+			margin: 10px auto;
+			width: 70px;
+			border: 1px solid #B22230;
+			color: #B22230;
+			border-radius: 5px;
+			text-align: center;
+		}
+		.thumbs_up:hover{
+			border: 1px solid #B22230;
+			background-color: #B22230;
+			color: white;
+		}
+		.view_content{
+			padding: 10px;
+		}
+		.view_info_btn_wrap{
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 10px 40px;
+		}
+		.view_info_btn_wrap>div>a{
+			display: inline-block;
+			width: 65px;
+			padding: 5px 10px;
+			margin: 0 3px;
+			border: 1px solid #B22230;
+			background-color: #B22230;
+			color: white;
+			border-radius: 5px;
+			text-align: center;
+		}
+		.view_reply_header{
+		    margin: 10px;
+		}
+
+		.view_reply_wrap{
+			margin: 20px 0 40px;
+		}
+
+		.view_reply_title{
+			display: flex;
+			justify-content: space-between;
+			background-color: #F1F1F1;
+			padding: 5px 10px;
+		}
+		.view_reply_title>div{
+			display: flex;
+		}
+		.view_reply_title>div>div{
+			margin: 0 5px;
+		}
+		.fa-heart{
+			color: #B22230;
+		}
+		.view_reply_content{
+			margin: 10px;
+		}
+		.view_reply_input_wrap{
+			display: flex;
+			justify-content: center;
+		}
+		.view_reply_input{
+			border: 1px solid #37475A;
+			height: 80px;
+		}
+
+		.view_reply_input>input{
+			border: none;
+	   		outline: none;
+	    	padding: 15px;
+	    	width: 610px;
+		}
+		.view_reply_input_btn{
+			display: inline-block;
+			border: 1px solid #37475A;
+			background-color: #37475A;
+			color: white;
+			height: 80px;
+			text-align: center;
+			padding: 29px;
+    		margin-left: 10px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="board_view_wrap">
+		<h2>자유게시판</h2>
+		<div class="view_content_wrap">
+			<div class="view_title">제목</div>
+			<div class="view_info_wrap">
+				<div>징구</div>
+				<div class="view_info">
+					<div>2020-03-20</div>
+					<div><i class="far fa-eye"></i>135</div>
+					<div><i class="far fa-thumbs-up"></i>21</div>
+				</div>
+			</div>
+			<div class="view_content">내용</div>
+			<a class="thumbs_up" href="#"><i class="far fa-thumbs-up"></i>추천</a>
+		</div>
+		<div class="view_info_btn_wrap">
+			<div>
+				<a href="#">목록</a>
+				<a href="#">답글</a>
+			</div>
+			<div>
+				<a href="#">수정</a>
+				<a href="#">삭제</a>
+			</div>
+		</div>
+		<div class="view_reply_list_wrap">
+			<div class="view_reply_header"><i class="fas fa-comment-dots"></i> 댓글</div>
+			<div class="view_reply_input_wrap">
+
+				<div class="view_reply_input">
+					<input type="input" name="" placeholder="로그인이 필요한 서비스 입니다.">
+				</div>
+				<a class="view_reply_input_btn" href="#">댓글쓰기</a>
+			</div>
+
+			<div class="view_reply_wrap">
+
+				<div class="view_reply_title">
+					<div>징구</div>
+					<div>
+						<div>2020-03-21</div>
+						<div>
+							<a href="#"><i class="fas fa-heart"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="view_reply_content">
+					<div>내용</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+</body>
+</html>
